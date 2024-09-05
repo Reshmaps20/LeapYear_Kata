@@ -4,7 +4,11 @@ public class LeapYear {
 
 	public boolean isLeapYear(int year) {
 
-		return (year % 400 == 0) || (year % 100 != 0 && year % 4 == 0);
+		return isDivisibleBy(year, 400) || (!isDivisibleBy(year, 100) && isDivisibleBy(year, 4));
+	}
+
+	private boolean isDivisibleBy(int year, int divisor) {
+		return year % divisor == 0;
 	}
 
 }
