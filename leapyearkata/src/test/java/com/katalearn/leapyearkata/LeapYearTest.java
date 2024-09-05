@@ -32,4 +32,11 @@ public class LeapYearTest {
 		boolean result = leapyear.isLeapYear(2100);
 		assertFalse(result);
 	}
+	
+	@Test
+	public void testIsLeapYear_check2005IsALeapYear_returnFalse() {
+		LeapYear leapyear = new LeapYear();
+		boolean result = leapyear.isLeapYear(2005);
+		assertFalse(result);
+	}
 }
